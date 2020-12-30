@@ -1,7 +1,11 @@
 div.results {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: center;
+
+  p.or {
+    padding: 30px;
+  }
 
   div.other {
     display: grid;
