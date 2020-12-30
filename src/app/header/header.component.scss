@@ -1,0 +1,22 @@
+div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #001a33;
+  border-radius: 0px 0px 100px 0px;
+  padding-top: 115px;
+  padding-bottom: 140px;
+  color: #eeeeee;
+
+  h1 {
+    font-size: 96px;
+    margin: 0px;
+    padding-bottom: 10px;
+  }
+
+  h2 {
+    font-size: 48px;
+    font-weight: 500;
+    margin: 0px;
+  }
+}

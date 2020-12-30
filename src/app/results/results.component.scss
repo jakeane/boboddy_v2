@@ -1,0 +1,10 @@
+div.results {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+
+  div.other {
+    display: grid;
+    grid-template-columns: 150px 150px;
+  }
+}

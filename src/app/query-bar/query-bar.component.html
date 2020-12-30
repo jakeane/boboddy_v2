@@ -1,0 +1,35 @@
+<div class="bar">
+  <form [formGroup]="query" (ngSubmit)="onSubmit()">
+    <div class="query">
+      <mat-form-field floatLabel="never">
+        <input
+          matInput
+          type="text"
+          formControlName="word"
+          placeholder="Enter word here..."
+        />
+      </mat-form-field>
+      <div class="spacer"></div>
+      <mat-form-field>
+        <mat-select formControlName="data">
+          <mat-option value="data1">Data 1</mat-option>
+          <mat-option value="data2">Data 2</mat-option>
+          <mat-option value="data3">Data 3</mat-option>
+          <mat-option value="data4">Data 4</mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+    <div class="search" type="submit">
+      <button mat-fab>
+        <mat-icon
+          [ngStyle]="{
+            color: '#eeeeee',
+            'font-size': '36px'
+          }"
+          [inline]="true"
+          >search</mat-icon
+        >
+      </button>
+    </div>
+  </form>
+</div>
