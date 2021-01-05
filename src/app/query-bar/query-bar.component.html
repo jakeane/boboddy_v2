@@ -8,14 +8,23 @@
           formControlName="word"
           placeholder="Enter word here..."
         />
+        <mat-error *ngIf="query.controls.word.errors" class="error">
+          <span *ngIf="query.controls.word.errors"
+            >Must be one alphabetical word</span
+          >
+        </mat-error>
       </mat-form-field>
       <div class="spacer"></div>
       <mat-form-field>
         <mat-select formControlName="data">
-          <mat-option value="data1">Data 1</mat-option>
-          <mat-option value="data2">Data 2</mat-option>
-          <mat-option value="data3">Data 3</mat-option>
-          <mat-option value="data4">Data 4</mat-option>
+          <mat-option value="quotes">Famous Quotes</mat-option>
+          <mat-option value="shakespeare">Shakespeare Plays</mat-option>
+          <mat-option value="state_union"
+            >State of the Union Speeches</mat-option
+          >
+          <mat-option value="inaugural">Inaugural Addresses</mat-option>
+          <mat-option value="bible">The Bible</mat-option>
+          <mat-option value="all">All of the Above</mat-option>
         </mat-select>
       </mat-form-field>
     </div>

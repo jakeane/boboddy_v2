@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-results',
@@ -7,7 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ResultsComponent implements OnInit {
 
-  topAcro = "testing exact silly things";
+  @Input()
+  acronyms!: string[];
 
   constructor() { }
 

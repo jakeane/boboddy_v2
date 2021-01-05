@@ -7,6 +7,6 @@
 <!-- * * * * * * * to get started with your project! * * * * * * * * -->
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
 <app-header></app-header>
-<app-query-bar></app-query-bar>
-<app-results></app-results>
+<app-query-bar [makeQuery]="makeQuery"></app-query-bar>
+<app-results *ngIf="acronyms" [acronyms]="acronyms"></app-results>
 <router-outlet></router-outlet>

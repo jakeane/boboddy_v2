@@ -2,12 +2,23 @@ div.results {
   display: flex;
   flex-direction: row;
   justify-content: center;
+  align-items: center;
+
+  div.topContainer {
+    width: 300px;
+    display: flex;
+    justify-content: flex-end;
+
+    p.topAcro {
+      font-size: 40px;
+    }
+  }
 
   p.or {
     padding: 30px;
   }
 
-  div.other {
+  div.otherContainer {
     display: grid;
     grid-template-columns: 150px 150px;
   }

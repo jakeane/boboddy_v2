@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormControl } from '@angular/forms';
+import { Component, OnInit, Input } from '@angular/core';
+import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-query-bar',
@@ -8,20 +8,33 @@ import { FormGroup, FormControl } from '@angular/forms';
 })
 export class QueryBarComponent implements OnInit {
 
-  query = new FormGroup({
-    word: new FormControl(''),
-    data: new FormControl('data1'),
-  })
 
-  constructor() { }
+  query: FormGroup;
+  wordRegex: RegExp = /^\s*[A-Za-z]+\s*$/;
+
+  @Input()
+  makeQuery!: (word: string, data: string) => void;
+
+
+  constructor(private formBuilder: FormBuilder) { 
+    this.query = this.formBuilder.group({
+      word: [null, Validators.pattern(this.wordRegex)],
+      data: 'quotes'
+    });
+   }
 
   ngOnInit(): void {
   }
 
   onSubmit(): void {
-    console.log('submit');
-    console.log(this.query.controls.word.value);
-    // only one word
+    if (this.query.valid) {
+      const word: string = (this.query.controls.word.value as string).trim();
+      const data: string = this.query.controls.data.value;
+      console.log(word, data);
+      this.makeQuery(word, data);
+    } else {
+      console.log("error");
+    }
   }
 
 }

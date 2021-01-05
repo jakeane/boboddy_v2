@@ -13,6 +13,7 @@ div.bar {
       border-radius: 30px;
       padding-left: 25px;
       padding-right: 25px;
+      margin-left: 86px;
       box-shadow: 4px 4px 20px rgba($color: #000000, $alpha: 0.25),
         -4px -4px 20px rgba($color: #000000, $alpha: 0.25);
 
@@ -27,6 +28,10 @@ div.bar {
       ::ng-deep .mat-form-field-flex {
         margin-top: -3px;
         margin-bottom: -10px;
+      }
+
+      ::ng-deep .mat-form-field-subscript-wrapper {
+        margin-top: 0px;
       }
 
       div.spacer {

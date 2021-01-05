@@ -7,6 +7,7 @@ import { HeaderComponent } from './header/header.component';
 import { QueryBarComponent } from './query-bar/query-bar.component';
 import { ResultsComponent } from './results/results.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatButtonModule } from '@angular/material/button';
@@ -25,6 +26,7 @@ import { MatIconModule } from '@angular/material/icon';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    HttpClientModule,
     ReactiveFormsModule,
     MatFormFieldModule,
     MatButtonModule,

@@ -1,10 +1,9 @@
 <div class="results">
-  <p [innerHTML]="getAcro(topAcro)"></p>
+  <div class="topContainer">
+    <p class="topAcro" [innerHTML]="getAcro(acronyms[0])"></p>
+  </div>
   <p class="or">or...</p>
-  <div class="other">
-    <p>Acronym 2</p>
-    <p>Acronym 3</p>
-    <p>Acronym 4</p>
-    <p>Acronym 5</p>
+  <div class="otherContainer">
+    <p *ngFor="let acro of acronyms.slice(1)" [innerHTML]="getAcro(acro)"></p>
   </div>
 </div>
