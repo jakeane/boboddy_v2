@@ -123,6 +123,14 @@
               "devServerTarget": "boboddyv2:serve:production"
             }
           }
+        },
+        "deploy": {
+          "builder": "@netlify-builder/deploy:deploy",
+          "options": {
+            "outputPath": "dist/boboddyv2",
+            "netlifyToken": "",
+            "siteId": ""
+          }
         }
       }
     }
