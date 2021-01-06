@@ -119,6 +119,24 @@ div.animation {
   background-size: 700px 100%;
 }
 
+@media only screen and (max-width: 720px) {
+  div.container {
+    flex-direction: column;
+
+    div.topContainer {
+      div.topBox {
+        align-items: center;
+      }
+    }
+
+    div.otherContainer {
+      div.otherBoxes {
+        margin-left: 25px;
+      }
+    }
+  }
+}
+
 @keyframes fullView {
   100% {
     opacity: 100%;

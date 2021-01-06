@@ -1,8 +1,8 @@
 div.bar {
   margin-top: -27px;
-  opacity: 0%;
-  animation: reveal 0.75s forwards ease-in;
-  animation-delay: 2.5s;
+  // opacity: 0%;
+  // animation: reveal 0.75s forwards ease-in;
+  // animation-delay: 2.5s;
 
   form {
     display: flex;
@@ -56,6 +56,23 @@ div.bar {
   }
 }
 
+@media only screen and (max-width: 720px) {
+  div.bar {
+    margin-top: -57px;
+    form {
+      div.query {
+        flex-direction: column;
+        margin-left: unset;
+        div.spacer {
+          height: 1px;
+          width: unset;
+          margin-left: -25px;
+          margin-right: -25px;
+        }
+      }
+    }
+  }
+}
 @keyframes reveal {
   100% {
     opacity: 100%;

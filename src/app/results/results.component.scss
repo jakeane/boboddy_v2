@@ -32,6 +32,28 @@ div.results {
   }
 }
 
+@media only screen and (max-width: 720px) {
+  div.results {
+    flex-direction: column;
+    padding-bottom: 25px;
+
+    div.topContainer {
+      justify-content: center;
+    }
+
+    p.or {
+      padding: 0px;
+      margin-top: -10px;
+    }
+
+    div.otherContainer {
+      p {
+        margin-left: 25px;
+      }
+    }
+  }
+}
+
 @keyframes fullView {
   100% {
     opacity: 100%;
