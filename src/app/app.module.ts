@@ -14,13 +14,17 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
 import { MatIconModule } from '@angular/material/icon';
+import { LoadingComponent } from './loading/loading.component';
+import { ErrormessageComponent } from './errormessage/errormessage.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     QueryBarComponent,
-    ResultsComponent
+    ResultsComponent,
+    LoadingComponent,
+    ErrormessageComponent
   ],
   imports: [
     BrowserModule,

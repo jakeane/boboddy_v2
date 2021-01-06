@@ -1,0 +1,26 @@
+<div class="container" *ngIf="skeleton">
+  <div class="topContainer">
+    <div *ngFor="let i of skeleton[0]" class="topBox">
+      <div class="box">
+        <div class="animation" [style.width.%]="i"></div>
+      </div>
+    </div>
+  </div>
+  <div class="or"><div class="orBox animation"></div></div>
+  <div class="otherContainer">
+    <div
+      *ngFor="let skel of skeleton.slice(1); let j = index"
+      class="otherBoxes"
+    >
+      <div *ngFor="let width of skel">
+        <div class="box">
+          <div
+            [ngClass]="j % 2 == 0 ? 'animationA' : 'animationB'"
+            [style.width.%]="width"
+            class="pseudowords"
+          ></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,143 @@
+div.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: 24px;
+  padding-bottom: 20px;
+
+  //   div.wrapper {
+  opacity: 0%;
+  animation: fullView 2.5s forwards ease-in;
+
+  div.topContainer {
+    width: 300px;
+    margin-top: 12px;
+
+    div.topBox {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+
+      div.box {
+        width: 200px;
+        height: 40px;
+        margin-top: 4px;
+        margin-bottom: 7px;
+        div.animation {
+          width: 100%;
+          height: 100%;
+          border-radius: 10px;
+          animation: shimmer 4.5s infinite linear;
+          background: linear-gradient(
+            to right,
+            #c4c4c4 4%,
+            #e2e2e2 25%,
+            #c4c4c4 36%
+          );
+          background-size: 700px 100%;
+        }
+      }
+    }
+
+    p.topAcro {
+      font-size: 40px;
+    }
+  }
+
+  div.or {
+    padding: 30px;
+    div.orBox {
+      margin-top: 15px;
+      width: 40px;
+      height: 20px;
+      background-color: grey;
+    }
+
+    div.animation {
+      animation: shimmer 4.5s infinite linear;
+      border-radius: 4px;
+      background: linear-gradient(
+        to right,
+        #c4c4c4 67%,
+        #e2e2e2 88%,
+        #c4c4c4 99%
+      );
+      background-size: 700px 100%;
+    }
+  }
+
+  div.otherContainer {
+    display: grid;
+    grid-template-columns: 150px 150px;
+
+    div.otherBoxes {
+      margin-top: 20px;
+      margin-bottom: 8px;
+      margin-left: -7px;
+      div.box {
+        width: 100px;
+        height: 16px;
+        margin-top: 3px;
+        margin-bottom: 3px;
+
+        div.animationA {
+          width: 100%;
+          height: 100%;
+          border-radius: 4px;
+          animation: shimmer 4.5s infinite linear;
+          background: linear-gradient(
+            to right,
+            #c4c4c4 49%,
+            #e2e2e2 70%,
+            #c4c4c4 81%
+          );
+          background-size: 700px 100%;
+        }
+        div.animationB {
+          width: 100%;
+          height: 100%;
+          border-radius: 5px;
+          animation: shimmer 4.5s infinite linear;
+          background: linear-gradient(
+            to right,
+            #c4c4c4 23%,
+            #e2e2e2 44%,
+            #c4c4c4 55%
+          );
+          background-size: 700px 100%;
+        }
+      }
+    }
+  }
+  //   }
+}
+
+div.animation {
+  animation: shimmer 4.5s infinite linear;
+  background: linear-gradient(to right, #c4c4c4 4%, #e2e2e2 25%, #c4c4c4 36%);
+  background-size: 700px 100%;
+}
+
+@keyframes fullView {
+  100% {
+    opacity: 100%;
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -700px 0;
+  }
+  100% {
+    background-position: 700px 0;
+  }
+}
+@keyframes shimmerSmall {
+  0% {
+    background-position: -400px 0;
+  }
+  100% {
+    background-position: 400px 0;
+  }
+}

@@ -9,8 +9,11 @@
           placeholder="Enter word here..."
         />
         <mat-error *ngIf="query.controls.word.errors" class="error">
-          <span *ngIf="query.controls.word.errors"
+          <span *ngIf="query.controls.word.errors.pattern"
             >Must be one alphabetical word</span
+          >
+          <span *ngIf="query.controls.word.errors.maxlength"
+            >Word is more than 20 characters</span
           >
         </mat-error>
       </mat-form-field>

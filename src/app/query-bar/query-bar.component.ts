@@ -18,7 +18,7 @@ export class QueryBarComponent implements OnInit {
 
   constructor(private formBuilder: FormBuilder) { 
     this.query = this.formBuilder.group({
-      word: [null, Validators.pattern(this.wordRegex)],
+      word: ['', [Validators.pattern(this.wordRegex), Validators.maxLength(20)]],
       data: 'quotes'
     });
    }
@@ -28,12 +28,12 @@ export class QueryBarComponent implements OnInit {
 
   onSubmit(): void {
     if (this.query.valid) {
-      const word: string = (this.query.controls.word.value as string).trim();
+      const word: string = (this.query.controls.word.value as string).trim().toLowerCase();
       const data: string = this.query.controls.data.value;
       console.log(word, data);
       this.makeQuery(word, data);
     } else {
-      console.log("error");
+      console.log(this.query.errors);
     }
   }
 

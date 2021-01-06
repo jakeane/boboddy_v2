@@ -9,6 +9,8 @@ div.results {
     display: flex;
     justify-content: flex-end;
 
+    opacity: 0%;
+    animation: fullView 1.5s forwards ease-in;
     p.topAcro {
       font-size: 40px;
     }
@@ -16,10 +18,22 @@ div.results {
 
   p.or {
     padding: 30px;
+    opacity: 0%;
+    animation: fullView 1.5s forwards ease-in;
+    animation-delay: 1s;
   }
 
   div.otherContainer {
     display: grid;
     grid-template-columns: 150px 150px;
+    opacity: 0%;
+    animation: fullView 1.5s forwards ease-in;
+    animation-delay: 2s;
+  }
+}
+
+@keyframes fullView {
+  100% {
+    opacity: 100%;
   }
 }

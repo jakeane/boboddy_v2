@@ -4,19 +4,41 @@ div {
   align-items: center;
   background-color: #001a33;
   border-radius: 0px 0px 100px 0px;
-  padding-top: 115px;
-  padding-bottom: 140px;
   color: #eeeeee;
+
+  height: 0px;
+  animation: pulldown 0.75s forwards cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  animation-delay: 0.5s;
 
   h1 {
     font-size: 96px;
     margin: 0px;
     padding-bottom: 10px;
+    opacity: 0%;
+    animation: reveal 0.75s forwards ease-in;
+    animation-delay: 1.5s;
   }
 
   h2 {
     font-size: 48px;
     font-weight: 500;
     margin: 0px;
+    opacity: 0%;
+    animation: reveal 0.75s forwards ease-in;
+    animation-delay: 2s;
+  }
+}
+
+@keyframes pulldown {
+  100% {
+    height: 185px;
+    padding-top: 115px;
+    padding-bottom: 140px;
+  }
+}
+
+@keyframes reveal {
+  100% {
+    opacity: 100%;
   }
 }

@@ -9,4 +9,11 @@
 <app-header></app-header>
 <app-query-bar [makeQuery]="makeQuery"></app-query-bar>
 <app-results *ngIf="acronyms" [acronyms]="acronyms"></app-results>
+<!-- <img src="../assets/output-onlinepngtools.png" alt="overlay" id="overlay" /> -->
+<app-loading
+  *ngIf="loading"
+  [wordLength]="wordLength"
+  [skeleton]="skeleton"
+></app-loading>
+<app-errormessage *ngIf="generationError"></app-errormessage>
 <router-outlet></router-outlet>
