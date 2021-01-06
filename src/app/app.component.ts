@@ -11,13 +11,13 @@ export class AppComponent {
   title = 'boboddyv2';
 
   acronyms: string[] | null = null;
-  loading: boolean = true;
+  loading: boolean = false;
   skeleton: number[][];
   generationError: boolean = false;
   wordLength: number = 5;
 
   constructor(private service: AppService) {
-    this.skeleton = this.generateSkeletonWidths(5);
+    this.skeleton = this.generateSkeletonWidths(0);
   }
 
   makeQuery = (word: string, data: string): void => {

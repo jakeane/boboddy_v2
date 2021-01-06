@@ -30,7 +30,6 @@ export class QueryBarComponent implements OnInit {
     if (this.query.valid) {
       const word: string = (this.query.controls.word.value as string).trim().toLowerCase();
       const data: string = this.query.controls.data.value;
-      console.log(word, data);
       this.makeQuery(word, data);
     } else {
       console.log(this.query.errors);
